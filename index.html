@@ -6,20 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Challenge 1 - Oracle next Education</title>
 
-    <!-- --CSS -->
+    <!-- FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300&family=Permanent+Marker&family=Sofia&family=Trocchi&display=swap"
+      rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/styles.css">
+    
   </head>
   <body>
-    <input type="text" name="texto" placeholder="Ingrese el texto aquí" />
-    <button>Encriptar</button>
-    <button>Desencriptar</button>
+    
+    <main>
+      <div class="logo">
+        <img class="logo-img" src="img/alura.png" alt="alura logo">
+      </div>
 
-    <div class="container munheco">
-      <img src="./img/Muñeco.jpg" alt="munheco" />
-      <p>Ningún mensaje fue encontrado</p>
-      <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+    <input class="principal-frame" type="text" name="texto" placeholder="Ingrese el texto aquí" />
+
+    <p class="alert">Solo letras minúsculas y sin acentos</p>
+    
+    <div class="buttons">
+    <button class="encrypt">Encriptar</button>
+    <button class="decrypt">Desencriptar</button>
     </div>
 
-    <footer>By Edgar Quetz</footer>
+    <div class="rectangle">
+      <img class="munheco" src="./img/munheco.jpg" alt="munheco" />
+      <div class="rec-frame">
+      <p class="frame1">Ningún mensaje fue encontrado</p>
+      <p class="frame2">Ingresa el texto que desees encriptar o desencriptar.</p>
+      </div>
+    </div>
+    <main>
+
   </body>
 </html>
