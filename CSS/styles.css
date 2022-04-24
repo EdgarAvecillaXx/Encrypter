@@ -1,65 +1,142 @@
+body {
+  position: relative;
+  background: #f3f5fc;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  width: 100vw;
+  height: 100vh;
+}
 
+   /* INPUT AREA */
+textarea.principal-frame {
+  border: none;
+  background: none;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  line-height: 150%;
+  color: #0a3871;
+}
+
+textarea.principal-frame::placeholder {
+  color: #0a3871;
+  opacity: 0.8;
+}
+
+  /* WARNING ALERT */
+p.alert {
+  position: absolute;
+  width: 229px;
+  font-size: 12px;
+  line-height: 150%;
+  color: #495057;
+}
+
+P.alert:before {
+  content: url(../img/alert.png);
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+  /* BUTTON LAYOUT */
+div.buttons {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+}
+
+div.buttons button {
+  border-radius: 24px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 24px;
+  padding: 24px;
+}
+
+div.buttons button.encrypt {
+  background: #0a3871;
+  margin-bottom: 24px;
+  color: #fff;
+  border: none;
+}
+
+div.buttons button.decrypt {
+  background-color: #f3f5fc;
+  border: 1px solid #0a3871;
+  color: #0a3871;
+}
+
+  /* WHITE RECTANGLE */
+div.rectangle {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 32px;
+  background: #ffffff;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+}
+
+div.rectangle img.munheco {
+  display: none;
+}
+
+div.rectangle div.rec-frame {
+  text-align: center;
+  color: #343a40;
+}
+
+div.rectangle div.rec-frame p.frame1 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 120%;
+  margin-bottom: 16px;
+}
+
+div.rectangle div.rec-frame p.frame2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+  /* SMARTHPHONE DESIGN */
 @media only screen and (max-width: 480px) {
   body {
-    position: relative;
-    background: #f3f5fc;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    width: 100vw;
     height: 933px;
   }
 
+    /* LOGO */
   div.logo {
     width: 100%;
     height: 96px;
   }
 
   div.logo img.logo-img {
-    margin-left: 16px;
     margin-top: 24px;
+    margin-left: 16px;
   }
 
-  input.principal-frame {
-    width: 343px;
+    /* INPUT LAYOUT */
+  textarea.principal-frame {
     display: block;
+    width: 343px;
+    height: 250px;
     margin: 0 auto;
     margin-top: 56px;
-    font-size: 32px;
-    line-height: 150%;
-    color: #0a3871;
-    border: none;
-    background: none;
-    outline: none;
   }
 
-  input.principal-frame::placeholder {
-    color: #0a3871;
-    opacity: 0.8;
-  }
-
+    /* WARNING ALERT */
   p.alert {
-    position: absolute;
-    width: 229px;
     left: 16px;
     top: 451px;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 150%;
-    color: #495057;
   }
 
-  P.alert:before {
-    content: url(../img/alert.png);
-    margin-right: 8px;
-    vertical-align: middle;
-  }
-
+   /* BUTTON LAYOUT */
   div.buttons {
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
-
-    position: absolute;
     width: 343px;
     height: 158px;
     left: 16px;
@@ -69,122 +146,57 @@
   div.buttons button {
     width: 343px;
     height: 42%;
-    border-radius: 24px;
-    text-align: center;
-    font-size: 16px;
-    line-height: 19px;
-    padding: 24px;
   }
 
-  div.buttons button.encrypt {
-    background: #0a3871;
-    margin-bottom: 24px;
-    color: #fff;
-    border: none;
-  }
-
-  div.buttons button.decrypt {
-    background-color: #f3f5fc;
-    border: 1px solid #0a3871;
-    color: #0a3871;
-  }
-
+    /* WHITE RECTANGLE*/
   div.rectangle {
-    padding: 32px;
-    position: absolute;
-    box-sizing: border-box;
     width: 327px;
     height: 186px;
     top: 707px;
     left: 24px;
     bottom: 40px;
-    background: #ffffff;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    border-radius: 32px;
-  }
-
-  div.rectangle div.rec-frame {
-    text-align: center;
-    color: #343a40;
   }
 
   div.rectangle div.rec-frame p.frame1 {
-    font-weight: bold;
     width: 263px;
     height: 58px;
-    font-size: 24px;
-    line-height: 120%;
-    margin-bottom: 16px;
   }
 
   div.rectangle div.rec-frame p.frame2 {
     width: 263px;
     height: 48px;
-    font-size: 16px;
-    line-height: 150%;
-  }
-
-  div.rectangle img.munheco {
-    display: none;
   }
 }
 
+   /* TABLET DESIGN */
 @media only screen and (min-width: 481px) and (max-width: 900px) {
-  body {
-    position: relative;
-    background: #f3f5fc;
-    width: 100vw;
-    height: 100vh;
-  }
 
+  /* LOGO */
   div.logo {
     position: absolute;
-    left: 5.21%;
     top: 6.25%;
+    left: 5.21%;
   }
 
-  input.principal-frame {
+    /* INPUT LAYOUT */
+  textarea.principal-frame {
     position: absolute;
     width: 688px;
-    height: 48px;
-    left: 40px;
+    height: 45%;
     top: 240px;
-    font-size: 32px;
-    line-height: 150%;
-    color: #0a3871;
-    background: none;
-    border: none;
-    outline: none;
+    left: 40px;
   }
 
-  input.principal-frame::placeholder {
-    color: #0a3871;
-    opacity: 0.8;
-  }
-
+    /* WARNING ALERT */
   p.alert {
-    position: absolute;
-    width: 229px;
-    height: 18px;
     left: 40px;
     top: 836px;
-    font-size: 12px;
-    line-height: 150%;
-    color: #495057;
   }
 
-  p.alert::before {
-    content: url(../img/alert.png);
-    margin-right: 8px;
-    vertical-align: middle;
-  }
-
+    /* BUTTON LAYOUT */
   div.buttons {
-    display: flex;
-    flex-direction: row;
     align-items: flex-start;
     padding: 0px;
-    position: absolute;
     width: 688px;
     height: 67px;
     left: 40px;
@@ -192,130 +204,69 @@
   }
 
   div.buttons button {
-    position: static;
     width: 100%;
     height: 67px;
-    border-radius: 24px;
-    font-size: 16px;
-    line-height: 19px;
-    padding: 24px;
-    text-align: center;
   }
 
   div.buttons button.encrypt {
-    background: #0a3871;
     margin-right: 24px;
-    color: #fff;
-    border: none;
+    margin-bottom: 0;
   }
 
-  div.buttons button.decrypt {
-    background-color: #f3f5fc;
-    border: 1px solid #0a3871;
-    color: #0a3871;
-  }
-
+  /* WHITE RECTANGLE */
   div.rectangle {
-    padding: 32px;
-    position: absolute;
-    box-sizing: border-box;
     width: 688px;
     height: 133px;
-    left: 40px;
     top: 1001px;
-    background: #ffffff;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    border-radius: 32px;
-  }
-
-  div.rectangle div.rec-frame {
-    position: static;
-    text-align: center;
-    color: #343a40;
+    left: 40px;
   }
 
   div.rectangle div.rec-frame p.frame1 {
-    font-weight: bold;
-    font-size: 24px;
     height: 29px;
-    line-height: 120%;
-    margin-bottom: 16px;
   }
 
   div.rectangle div.rec-frame p.frame2 {
-    font-size: 16px;
     height: 24px;
-    line-height: 150%;
-    font-weight: 400;
-  }
-
-  div.rectangle img.munheco {
-    display: none;
+    font-size: 16px;
   }
 }
 
+   /* PC DESIGN */
 @media only screen and (min-width: 901px) {
-  body {
-    position: relative;
-    background: #f3f5fc;
-    font-family: "Inter", sans-serif;
-    font-size: 1.57vh;
-    width: 100vw;
-    height: 100vh;
-  }
 
+  /* LOGO */
   div.logo {
     position: absolute;
+    display: flex;
     width: 8.3vw;
     height: 4.69vh;
     top: 3.9vh;
-    display: flex;
   }
 
   img.logo-img {
-    margin: auto;
     height: 100%;
+    margin: auto;
   }
 
-  input.principal-frame {
+    /* INPUT LAYOUT */
+  textarea.principal-frame {
     position: absolute;
-    left: 17vw;
-    top: 16.41vh;
     width: 40vw;
-    height: 4.7vh;
-    font-size: calc(1.57vh * 2);
-    line-height: 150%;
-    background: none;
-    border: none;
-    color: #0a3871;
-    outline: none;
+    height: 60%;
+    top: 16.41vh;
+    left: 17vw;
   }
 
-  input.principal-frame::placeholder {
-    color: #0a3871;
-    opacity: 1;
-  }
-
+  /* WARNING ALERT */
   p.alert {
-    position: absolute;
     width: 17vw;
-    height: 1.75vh;
     left: 18vw;
     top: 81vh;
     font-size: 1.8vh;
-    color: #343a40;
   }
 
-  p.alert::before {
-    content: url(../img/alert.png);
-    vertical-align: middle;
-    margin-right: 1vh;
-  }
-
+    /* BUTTON LAYOUT */
   div.buttons {
-    position: absolute;
-    display: flex;
-    flex-flow: row;
     justify-content: space-between;
     width: 47.2vw;
     height: 6.55vh;
@@ -326,64 +277,43 @@
   div.buttons button {
     width: 22.8vw;
     height: 100%;
-    border-radius: 1.5vw;
-    text-align: center;
-    line-height: 1.32vw;
+    padding: 0;
   }
 
   div.buttons button.encrypt {
-    border: none;
-    background-color: #0a3871;
-    color: #fff;
+    margin-bottom: 0;
   }
 
-  div.buttons button.decrypt {
-    border: 1px solid #0a3871;
-    background-color: #f3f5fc;
-    color: #0a3871;
-  }
-
+  /* WHITE RECTANGLE */
   div.rectangle {
-    position: absolute;
     width: 26vw;
     height: 92vh;
-    left: 69.45vw;
     top: 3.9vh;
-    background-color: #fff;
-    box-shadow: 0 2.34vh 3.14vh -0.8vh rgba(0, 0, 0, 0.08);
-    border-radius: 2vw;
+    left: 69.45vw;
+    padding: 0;
   }
 
   div.rectangle img.munheco {
+    display: block;
     width: 18vw;
     height: 32vh;
     margin: 0 auto;
     margin-top: 23vh;
-    display: block;
   }
 
   div.rectangle p.frame1 {
     display: block;
-    margin: 0 auto;
-    position: static;
     width: 80%;
     height: auto;
-    font-weight: bold;
+    margin: 0 auto;
     font-size: 3.5vh;
-    line-height: 120%;
-    text-align: center;
-    color: #343a40;
   }
 
   div.rectangle p.frame2 {
     display: block;
-    margin: 1.5vh auto;
-    position: static;
     width: 80%;
     height: auto;
-    line-height: 150%;
-    text-align: center;
+    margin: 1.5vh auto;
     font-size: 2vh;
-    color: #343a40;
   }
 }
