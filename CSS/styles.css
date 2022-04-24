@@ -1,4 +1,135 @@
-@media only screen and (min-width: 300px) and (max-width: 900px) {
+
+@media only screen and (max-width: 480px) {
+  body {
+    position: relative;
+    background: #f3f5fc;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    width: 100vw;
+    height: 933px;
+  }
+
+  div.logo {
+    width: 100%;
+    height: 96px;
+  }
+
+  div.logo img.logo-img {
+    margin-left: 16px;
+    margin-top: 24px;
+  }
+
+  input.principal-frame {
+    width: 343px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 56px;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0a3871;
+    border: none;
+    background: none;
+    outline: none;
+  }
+
+  input.principal-frame::placeholder {
+    color: #0a3871;
+    opacity: 0.8;
+  }
+
+  p.alert {
+    position: absolute;
+    width: 229px;
+    left: 16px;
+    top: 451px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #495057;
+  }
+
+  P.alert:before {
+    content: url(../img/alert.png);
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+  div.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: absolute;
+    width: 343px;
+    height: 158px;
+    left: 16px;
+    top: 485px;
+  }
+
+  div.buttons button {
+    width: 343px;
+    height: 42%;
+    border-radius: 24px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 24px;
+  }
+
+  div.buttons button.encrypt {
+    background: #0a3871;
+    margin-bottom: 24px;
+    color: #fff;
+    border: none;
+  }
+
+  div.buttons button.decrypt {
+    background-color: #f3f5fc;
+    border: 1px solid #0a3871;
+    color: #0a3871;
+  }
+
+  div.rectangle {
+    padding: 32px;
+    position: absolute;
+    box-sizing: border-box;
+    width: 327px;
+    height: 186px;
+    top: 707px;
+    left: 24px;
+    bottom: 40px;
+    background: #ffffff;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+  }
+
+  div.rectangle div.rec-frame {
+    text-align: center;
+    color: #343a40;
+  }
+
+  div.rectangle div.rec-frame p.frame1 {
+    font-weight: bold;
+    width: 263px;
+    height: 58px;
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 16px;
+  }
+
+  div.rectangle div.rec-frame p.frame2 {
+    width: 263px;
+    height: 48px;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  div.rectangle img.munheco {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 900px) {
   body {
     position: relative;
     background: #f3f5fc;
@@ -28,10 +159,10 @@
 
   input.principal-frame::placeholder {
     color: #0a3871;
-    opacity: 1;
+    opacity: 0.8;
   }
 
-  p.alert{
+  p.alert {
     position: absolute;
     width: 229px;
     height: 18px;
@@ -42,7 +173,7 @@
     color: #495057;
   }
 
-  p.alert::before{
+  p.alert::before {
     content: url(../img/alert.png);
     margin-right: 8px;
     vertical-align: middle;
@@ -62,7 +193,7 @@
 
   div.buttons button {
     position: static;
-    width: 332px;
+    width: 100%;
     height: 67px;
     border-radius: 24px;
     font-size: 16px;
@@ -103,7 +234,7 @@
     color: #343a40;
   }
 
-  div.rectangle div.rec-frame p.frame1{
+  div.rectangle div.rec-frame p.frame1 {
     font-weight: bold;
     font-size: 24px;
     height: 29px;
@@ -111,7 +242,7 @@
     margin-bottom: 16px;
   }
 
-  div.rectangle div.rec-frame p.frame2{
+  div.rectangle div.rec-frame p.frame2 {
     font-size: 16px;
     height: 24px;
     line-height: 150%;
