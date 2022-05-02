@@ -7,7 +7,7 @@ body {
   height: 100vh;
 }
 
-   /* INPUT AREA */
+/** INPUT AREA */
 textarea.principal-frame {
   border: none;
   background: none;
@@ -25,10 +25,10 @@ textarea.principal-frame::placeholder {
   opacity: 0.8;
 }
 
-  /* WARNING ALERT */
+/** WARNING ALERT */
 p.alert {
   position: absolute;
-  width: 229px;
+  width: 300px;
   font-size: 12px;
   line-height: 150%;
   color: #495057;
@@ -37,10 +37,10 @@ p.alert {
 P.alert:before {
   content: url(../img/alert.png);
   margin-right: 8px;
-  vertical-align: middle;
+  vertical-align: text-top;
 }
 
-  /* BUTTON LAYOUT */
+/** BUTTON LAYOUT */
 div.buttons {
   position: absolute;
   display: flex;
@@ -53,7 +53,10 @@ div.buttons button {
   font-size: 16px;
   line-height: 19px;
   padding: 24px;
-  padding: 24px;
+}
+
+div.buttons button:hover {
+  cursor: pointer;
 }
 
 div.buttons button.encrypt {
@@ -63,13 +66,17 @@ div.buttons button.encrypt {
   border: none;
 }
 
+div.buttons button.encrypt:active {
+  background-color: #082f5f;
+}
+
 div.buttons button.decrypt {
   background-color: #f3f5fc;
   border: 1px solid #0a3871;
   color: #0a3871;
 }
 
-  /* WHITE RECTANGLE */
+/** WHITE RECTANGLE */
 div.rectangle {
   position: absolute;
   box-sizing: border-box;
@@ -101,13 +108,41 @@ div.rectangle div.rec-frame p.frame2 {
   line-height: 150%;
 }
 
-  /* SMARTHPHONE DESIGN */
+div.rectangle p.result{
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 150%;
+color: #495057;
+}
+
+div.rectangle button.copy {
+  
+  border-radius: 24px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 19px;
+  border: 1px solid #0a3871;
+  background-color: #fff;
+  color: #0a3871;
+}
+
+#pre-result {
+  display: block;
+}
+
+#result {
+  display: none;
+}
+
+/** SMARTHPHONE DESIGN */
 @media only screen and (max-width: 480px) {
   body {
     height: 933px;
   }
 
-    /* LOGO */
+  /** LOGO */
   div.logo {
     width: 100%;
     height: 96px;
@@ -118,7 +153,7 @@ div.rectangle div.rec-frame p.frame2 {
     margin-left: 16px;
   }
 
-    /* INPUT LAYOUT */
+  /** INPUT LAYOUT */
   textarea.principal-frame {
     display: block;
     width: 343px;
@@ -127,13 +162,13 @@ div.rectangle div.rec-frame p.frame2 {
     margin-top: 56px;
   }
 
-    /* WARNING ALERT */
+  /** WARNING ALERT */
   p.alert {
     left: 16px;
     top: 451px;
   }
 
-   /* BUTTON LAYOUT */
+  /** BUTTON LAYOUT */
   div.buttons {
     flex-direction: column;
     align-items: flex-start;
@@ -148,7 +183,7 @@ div.rectangle div.rec-frame p.frame2 {
     height: 42%;
   }
 
-    /* WHITE RECTANGLE*/
+  /** WHITE RECTANGLE*/
   div.rectangle {
     width: 327px;
     height: 186px;
@@ -168,17 +203,16 @@ div.rectangle div.rec-frame p.frame2 {
   }
 }
 
-   /* TABLET DESIGN */
+/** TABLET DESIGN */
 @media only screen and (min-width: 481px) and (max-width: 900px) {
-
-  /* LOGO */
+  /** LOGO */
   div.logo {
     position: absolute;
     top: 6.25%;
     left: 5.21%;
   }
 
-    /* INPUT LAYOUT */
+  /** INPUT LAYOUT */
   textarea.principal-frame {
     position: absolute;
     width: 688px;
@@ -187,13 +221,13 @@ div.rectangle div.rec-frame p.frame2 {
     left: 40px;
   }
 
-    /* WARNING ALERT */
+  /** WARNING ALERT */
   p.alert {
     left: 40px;
     top: 836px;
   }
 
-    /* BUTTON LAYOUT */
+  /** BUTTON LAYOUT */
   div.buttons {
     align-items: flex-start;
     padding: 0px;
@@ -213,7 +247,7 @@ div.rectangle div.rec-frame p.frame2 {
     margin-bottom: 0;
   }
 
-  /* WHITE RECTANGLE */
+  /** WHITE RECTANGLE */
   div.rectangle {
     width: 688px;
     height: 133px;
@@ -231,10 +265,9 @@ div.rectangle div.rec-frame p.frame2 {
   }
 }
 
-   /* PC DESIGN */
+/** PC DESIGN */
 @media only screen and (min-width: 901px) {
-
-  /* LOGO */
+  /** LOGO */
   div.logo {
     position: absolute;
     display: flex;
@@ -248,7 +281,7 @@ div.rectangle div.rec-frame p.frame2 {
     margin: auto;
   }
 
-    /* INPUT LAYOUT */
+  /** INPUT LAYOUT */
   textarea.principal-frame {
     position: absolute;
     width: 40vw;
@@ -257,15 +290,15 @@ div.rectangle div.rec-frame p.frame2 {
     left: 17vw;
   }
 
-  /* WARNING ALERT */
+  /** WARNING ALERT */
   p.alert {
-    width: 17vw;
+    width: 30vw;
     left: 18vw;
     top: 81vh;
     font-size: 1.8vh;
   }
 
-    /* BUTTON LAYOUT */
+  /** BUTTON LAYOUT */
   div.buttons {
     justify-content: space-between;
     width: 47.2vw;
@@ -280,11 +313,7 @@ div.rectangle div.rec-frame p.frame2 {
     padding: 0;
   }
 
-  div.buttons button.encrypt {
-    margin-bottom: 0;
-  }
-
-  /* WHITE RECTANGLE */
+  /** WHITE RECTANGLE */
   div.rectangle {
     width: 26vw;
     height: 92vh;
@@ -315,5 +344,18 @@ div.rectangle div.rec-frame p.frame2 {
     height: auto;
     margin: 1.5vh auto;
     font-size: 2vh;
+  }
+
+  div.rectangle p.result {
+    width: 84%;
+    height: 73.36vh;
+    margin: 3.68vh 2.08vw;
+    overflow: auto;
+  }
+
+  div.rectangle button.copy {
+    width: 84%;
+    height: 6.55vh;
+    margin: auto 3.68vh;
   }
 }

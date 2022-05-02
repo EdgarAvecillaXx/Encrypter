@@ -1,47 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Challenge 1 - Oracle next Education</title>
 
-    <!-- FONTS-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300&family=Permanent+Marker&family=Sofia&family=Trocchi&display=swap"
-      rel="stylesheet">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Challenge 1 - Oracle next Education</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./CSS/reset.css">
-    <link rel="stylesheet" href="./CSS/styles.css">
+  <!--? FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300&family=Permanent+Marker&family=Sofia&family=Trocchi&display=swap"
+    rel="stylesheet">
+
+  <!--? CSS -->
+  <link rel="stylesheet" href="./CSS/reset.css">
+  <link rel="stylesheet" href="./CSS/styles.css">
+
+</head>
+
+<body>
+
+  <main>
+    <div class="logo">
+      <img class="logo-img" src="img/alura.png" alt="alura logo">
+    </div>
+
+    <textarea id="textarea" class="principal-frame" name="texto" placeholder="Enter the text here" ></textarea>
+
     
-  </head>
-  <body>
+    <p id='idAlert' class="alert">Only lowercase letters without accents</p>
     
-    <main>
-      <div class="logo">
-        <img class="logo-img" src="img/alura.png" alt="alura logo">
-      </div>
 
-    <textarea class="principal-frame" name="texto" placeholder="Ingrese el texto aquí"></textarea>
-
-    <p class="alert">Solo letras minúsculas y sin acentos</p>
-    
     <div class="buttons">
-    <button class="encrypt">Encriptar</button>
-    <button class="decrypt">Desencriptar</button>
+      <button class="encrypt" onclick="encrypt()">Encrypt</button>
+      <button class="decrypt" onclick="decrypt()">Decrypt</button>
     </div>
 
     <div class="rectangle">
-      <img class="munheco" src="./img/munheco.jpg" alt="munheco" />
-      <div class="rec-frame">
-      <p class="frame1">Ningún mensaje fue encontrado</p>
-      <p class="frame2">Ingresa el texto que desees encriptar o desencriptar.</p>
+      <div id="pre-result">
+        <img class="munheco" src="./img/munheco.jpg" alt="munheco" />
+        <div class="rec-frame">
+          <p class="frame1">No message was found</p>
+          <p class="frame2">Enter the text you want to encrypt or decrypt</p>
+        </div>
+        </div>
+
+        <!--? Frame with the decrypt/encrypt text-->
+        <div id="result">
+          <p id='p-result'class="result"></p>
+          <button class="copy">Copy</button>
       </div>
     </div>
-    <main>
+  </main>
 
-  </body>
+  <script src="./main.js"></script>
+</body>
+
 </html>
