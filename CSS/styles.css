@@ -108,17 +108,22 @@ div.rectangle div.rec-frame p.frame2 {
   line-height: 150%;
 }
 
-div.rectangle p.result{
-  font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 150%;
-color: #495057;
+div.rectangle textarea.result {
+  border: none;
+  background: none;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: #495057;
+
 }
 
 div.rectangle button.copy {
-  
   border-radius: 24px;
   text-align: center;
   font-size: 16px;
@@ -174,7 +179,7 @@ div.rectangle button.copy {
     align-items: flex-start;
     width: 343px;
     height: 158px;
-    left: 16px;
+    left: 4.27vw;
     top: 485px;
   }
 
@@ -185,21 +190,38 @@ div.rectangle button.copy {
 
   /** WHITE RECTANGLE*/
   div.rectangle {
-    width: 327px;
-    height: 186px;
+    padding: 0;
+    width: 343px;
+    height: fit-content;
     top: 707px;
-    left: 24px;
+    left: 4.27vw;
     bottom: 40px;
+    margin-bottom: 24px;
   }
 
   div.rectangle div.rec-frame p.frame1 {
+    margin: 32px auto 0px;
     width: 263px;
     height: 58px;
   }
 
   div.rectangle div.rec-frame p.frame2 {
+    margin: 16px auto 32px;
     width: 263px;
     height: 48px;
+  }
+
+  div.rectangle textarea.result{
+    margin: 32px;
+    width: 279px;
+    height: 432px;
+  }
+
+  div.rectangle button.copy{
+    display: block;
+    margin: 0 auto 32px;
+    width: 279px;
+    height: 67px;
   }
 }
 
@@ -218,12 +240,12 @@ div.rectangle button.copy {
     width: 688px;
     height: 45%;
     top: 240px;
-    left: 40px;
+    left: 4.95vw;
   }
 
   /** WARNING ALERT */
   p.alert {
-    left: 40px;
+    left: 5.21vw;
     top: 836px;
   }
 
@@ -233,7 +255,7 @@ div.rectangle button.copy {
     padding: 0px;
     width: 688px;
     height: 67px;
-    left: 40px;
+    left: 5.21vw;
     top: 870px;
   }
 
@@ -250,9 +272,9 @@ div.rectangle button.copy {
   /** WHITE RECTANGLE */
   div.rectangle {
     width: 688px;
-    height: 133px;
+    height: fit-content;
     top: 1001px;
-    left: 40px;
+    left: 5.21vw;
   }
 
   div.rectangle div.rec-frame p.frame1 {
@@ -262,6 +284,17 @@ div.rectangle button.copy {
   div.rectangle div.rec-frame p.frame2 {
     height: 24px;
     font-size: 16px;
+  }
+
+  div.rectangle textarea.result{
+    padding: 0;
+    width: 624px;
+    height: 180px;
+  }
+
+  div.rectangle button.copy {
+    width: 624px;
+    height: 67px;
   }
 }
 
@@ -346,11 +379,10 @@ div.rectangle button.copy {
     font-size: 2vh;
   }
 
-  div.rectangle p.result {
+  div.rectangle textarea.result {
     width: 84%;
     height: 73.36vh;
     margin: 3.68vh 2.08vw;
-    overflow: auto;
   }
 
   div.rectangle button.copy {
