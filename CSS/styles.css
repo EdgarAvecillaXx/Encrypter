@@ -176,8 +176,8 @@ div.rectangle button.copy {
   /** BUTTON LAYOUT */
   div.buttons {
     flex-direction: column;
-    align-items: flex-start;
-    width: 343px;
+    align-items: center;
+    width: 100%;
     height: 158px;
     left: 4.27vw;
     top: 485px;
