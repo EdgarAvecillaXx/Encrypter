@@ -190,6 +190,8 @@ div.rectangle button.copy {
 
   /** WHITE RECTANGLE*/
   div.rectangle {
+    display: block;
+    margin 0 auto;
     padding: 0;
     width: 343px;
     height: fit-content;
