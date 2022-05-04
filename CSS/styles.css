@@ -1,6 +1,6 @@
 body {
   position: relative;
-  background: #f3f5fc;
+  background: #f7cacd;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   width: 100vw;
@@ -17,11 +17,11 @@ textarea.principal-frame {
   font-family: "Inter", sans-serif;
   font-size: 32px;
   line-height: 150%;
-  color: #0a3871;
+  color: #64113f;
 }
 
 textarea.principal-frame::placeholder {
-  color: #0a3871;
+  color: #64113f;
   opacity: 0.8;
 }
 
@@ -60,7 +60,7 @@ div.buttons button:hover {
 }
 
 div.buttons button.encrypt {
-  background: #0a3871;
+  background: #64113f;
   margin-bottom: 24px;
   color: #fff;
   border: none;
@@ -71,9 +71,9 @@ div.buttons button.encrypt:active {
 }
 
 div.buttons button.decrypt {
-  background-color: #f3f5fc;
-  border: 1px solid #0a3871;
-  color: #0a3871;
+  background-color: #f7cacd;
+  border: 1px solid #64113f;
+  color: #64113f;
 }
 
 /** WHITE RECTANGLE */
@@ -92,7 +92,7 @@ div.rectangle img.munheco {
 
 div.rectangle div.rec-frame {
   text-align: center;
-  color: #343a40;
+  color: #de4d86;
 }
 
 div.rectangle div.rec-frame p.frame1 {
@@ -119,7 +119,7 @@ div.rectangle textarea.result {
   font-weight: 400;
   font-size: 24px;
   line-height: 150%;
-  color: #495057;
+  color: #64113f;
 
 }
 
@@ -128,9 +128,9 @@ div.rectangle button.copy {
   text-align: center;
   font-size: 16px;
   line-height: 19px;
-  border: 1px solid #0a3871;
+  border: 1px solid #64113f;
   background-color: #fff;
-  color: #0a3871;
+  color: #64113f;
 }
 
 #pre-result {
@@ -179,7 +179,6 @@ div.rectangle button.copy {
     align-items: center;
     width: 100%;
     height: 158px;
-
     top: 485px;
   }
 
@@ -191,14 +190,14 @@ div.rectangle button.copy {
   /** WHITE RECTANGLE*/
   div.rectangle {
     display: block;
-    margin 0 auto;
+    position: relative;
     padding: 0;
     width: 343px;
     height: fit-content;
-    top: 707px;
-
+    top: 300px;
     bottom: 40px;
     margin-bottom: 24px;
+    margin:auto;
   }
 
   div.rectangle div.rec-frame p.frame1 {
@@ -306,8 +305,8 @@ div.rectangle button.copy {
   div.logo {
     position: absolute;
     display: flex;
-    width: 8.3vw;
-    height: 4.69vh;
+    width: 10.3vw;
+    height: 12.69vh;
     top: 3.9vh;
   }
 

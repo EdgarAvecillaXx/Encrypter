@@ -27,14 +27,13 @@ function decrypt() {
   let textreplaced = "";
   let upperCase = /[A-Z]/;
   let accent = /[À-ðò-ÿ]/;
-  if (upperCase.test(text) != true && accent.test(text) != true) {
-    textreplaced = replace(text);
-    document.getElementById("p-result").innerText = textreplaced;
-    document.getElementById("pre-result").style.display = "none";
-    document.getElementById("result").style.display = "block";
-  } else if (upperCase.test(text) === true || accent.test(text) === true) {
+  if (
+    upperCase.test(text) === true ||
+    accent.test(text) === true ||
+    text === ""
+  ) {
     let styleidAlert = document.getElementById("idAlert").style;
-    styleidAlert.color = "crimson";
+    styleidAlert.color = "#64113f";
     styleidAlert.fontSize = "14px";
     setTimeout(() => {
       styleidAlert.color = "#495057";
@@ -42,6 +41,14 @@ function decrypt() {
     }, 1600);
     document.getElementById("pre-result").style.display = "block";
     document.getElementById("result").style.display = "none";
+  } else if (upperCase.test(text) != true && accent.test(text) != true) {
+    textreplaced = replace(text);
+    document.getElementById("p-result").innerText = textreplaced;
+    document.getElementById("pre-result").style.display = "none";
+    document.getElementById("result").style.display = "block";
+    if (window.innerWidth < 901) {
+      window.scroll({ top: 900, behavior: "smooth" });
+    }
   }
 }
 
@@ -50,7 +57,21 @@ function encrypt() {
   let encryptedtext = "";
   let upperCase = /[A-Z]/;
   let accent = /[À-ðò-ÿ]/;
-  if (upperCase.test(text) != true && accent.test(text) != true) {
+  if (
+    upperCase.test(text) === true ||
+    accent.test(text) === true ||
+    text === ""
+  ) {
+    let styleidAlert = document.getElementById("idAlert").style;
+    styleidAlert.color = "#64113f";
+    styleidAlert.fontSize = "14px";
+    setTimeout(() => {
+      styleidAlert.color = "#495057";
+      styleidAlert.fontSize = "12px";
+    }, 1600);
+    document.getElementById("pre-result").style.display = "block";
+    document.getElementById("result").style.display = "none";
+  } else if (upperCase.test(text) != true && accent.test(text) != true) {
     for (let letter of text) {
       switch (letter) {
         case "a":
@@ -76,20 +97,16 @@ function encrypt() {
       document.getElementById("pre-result").style.display = "none";
       document.getElementById("result").style.display = "block";
     }
-  } else if (upperCase.test(text) === true || accent.test(text) === true) {
-    let styleidAlert = document.getElementById("idAlert").style;
-    styleidAlert.color = "crimson";
-    styleidAlert.fontSize = "14px";
-    setTimeout(() => {
-      styleidAlert.color = "#495057";
-      styleidAlert.fontSize = "12px";
-    }, 1600);
-    document.getElementById("pre-result").style.display = "block";
-    document.getElementById("result").style.display = "none";
+    if (window.innerWidth < 901) {
+      window.scroll({ top: 900, behavior: "smooth" });
+    }
   }
 }
 
 function copy() {
-  document.getElementById("p-result").select()
-  navigator.clipboard.writeText(document.getElementById("p-result").value)
+  document.getElementById("p-result").select();
+  navigator.clipboard.writeText(document.getElementById("p-result").value);
+  if (window.innerWidth < 901){
+    window.scroll({top:0, behavior:"smooth"})
+  }
 }
